@@ -35,6 +35,8 @@ To allow `other-fn` to use the name of `other-fn` within the body, use `labels` 
 
 ### Logic
 
+#### `if`
+
     (if (= 5 (+ 4 1))
          'return-true
          'return-false')
@@ -46,6 +48,20 @@ You can fit multiple commands into `if` via `progn`:
                 'its-true)               ; Second command
         'its-false)
 
+#### `cond`
+
+    (defun number-size (n)
+        (cond ((< n 10) 'small)
+              ((= n 10) 'medium')
+              ((> n 10) 'large)
+              (t 'we-reached-the-else)))
+
+#### Others
+
+* There is also a `case`/`otherwise` form that uses `eq` to compare symbols.
+* `and`
+* `or`
+
 ### Functions to Know
 
 * `ash` -- arithmetic shift
@@ -54,3 +70,6 @@ You can fit multiple commands into `if` via `progn`:
 * `expt` -- exponent
 * `cons`, `car`, `cdr`, etc.
 * `1+` and `1-`
+* `oddp` and `evenp`-- check if number is odd or even
+* `member` -- see if something is in a list and returns the tail of the list
+
