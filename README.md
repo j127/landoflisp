@@ -66,10 +66,24 @@ You can fit multiple commands into `if` via `progn`:
 
 * `ash` -- arithmetic shift
 * `eq` -- compares two symbols
+* `equal` -- use this for most everything else, and you'll be okay
+* `equalp` -- like `equal` but handles things like: case-insensitivity and comparing ints with floats
+* `eql` -- works for symbols, numbers, and characters
+* `=` -- for numbers
+* `string-equal` -- for strings
+* `char-equal` -- for characters
 * `princ`
 * `expt` -- exponent
+* `sqrt` -- square root
 * `cons`, `car`, `cdr`, etc.
 * `1+` and `1-`
 * `oddp` and `evenp`-- check if number is odd or even
+* `list` -- create a list
+* `null` returns true for `nil`
 * `member` -- see if something is in a list and returns the tail of the list
+* `find-if` -- apply a function to list items and return the first item that evaluates as true. `(find-if #'some-fn '(some list of items))`
+* `assoc` -- get a key-value pair out of an alist.
+* `mapcar` -- map a function over a list
+* `apply` -- passes each item in a list into a function, even if nested
+* `append` -- joins lists
 
