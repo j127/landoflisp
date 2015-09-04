@@ -31,7 +31,7 @@ Define local functions with `flet`:
              (+ m m)))
       (some-fn (other-fn 127))) ; They don't know each other's name
 
-To allow `other-fn` to use the name of `other-fn` within the body, use `labels` instead of `flet`.
+To allow `other-fn` to use the name of `some-fn` within the body, use `labels` instead of `flet`.
 
 ### Logic
 
@@ -39,7 +39,7 @@ To allow `other-fn` to use the name of `other-fn` within the body, use `labels` 
 
     (if (= 5 (+ 4 1))
          'return-true
-         'return-false')
+         'return-false)
 
 You can fit multiple commands into `if` via `progn`:
 
